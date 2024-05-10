@@ -1,4 +1,6 @@
-﻿string input = @"turn on 489,959 through 759,964
+﻿using System.Data;
+
+string input = @"turn on 489,959 through 759,964
 turn off 820,516 through 871,914
 turn off 427,423 through 929,502
 turn on 774,14 through 977,877
@@ -300,5 +302,33 @@ turn on 31,760 through 655,892
 toggle 628,958 through 811,992";
 foreach (string cmd in input.Split('\n'))
 {
-    
+    Switch command; //= Switch.None
+    if (cmd.Contains("off")) command = Switch.Off;
+    else if (cmd.Contains("on")) command = Switch.On;
+    else if (cmd.Contains("toggle")) command = Switch.Toggle;
+    else continue;
+    string[] cmdsplit = cmd.Split(' ');
+    string startstr = cmdsplit[cmdsplit.Length - 3];
+    string endstr = cmdsplit[cmdsplit.Length - 1];
+
+    Pos start = new Pos()
+    {
+        x = 0,
+        y = 0
+    }
+
+    Console.WriteLine(cmd + " | " + command);
+}
+enum Switch 
+{
+    None,
+    On,
+    Off,
+    Toggle
+}
+
+struct Pos
+{
+    public int x;// = 0 you can choose where to declare it but you have to declare it
+    public int y;// = 0 you can choose where to declare it but you have to declare it
 }
