@@ -1,4 +1,4 @@
-﻿using System.Data;
+﻿using System.Linq;
 
 string input = @"turn on 489,959 through 759,964
 turn off 820,516 through 871,914
@@ -300,6 +300,12 @@ turn off 820,663 through 832,982
 turn on 550,460 through 964,782
 turn on 31,760 through 655,892
 toggle 628,958 through 811,992";
+
+input = @"turn on 0,0 through 999,999
+toggle 0,0 through 999,0
+turn off 499,499 through 500,500";
+
+bool[,] lights = new bool[1000, 1000];
 foreach (string cmd in input.Split('\n'))
 {
     Switch command; //= Switch.None
@@ -308,17 +314,34 @@ foreach (string cmd in input.Split('\n'))
     else if (cmd.Contains("toggle")) command = Switch.Toggle;
     else continue;
     string[] cmdsplit = cmd.Split(' ');
-    string startstr = cmdsplit[cmdsplit.Length - 3];
-    string endstr = cmdsplit[cmdsplit.Length - 1];
+    string[] startstr = cmdsplit[cmdsplit.Length - 3].Split(',');
+    string[] endstr = cmdsplit[cmdsplit.Length - 1].Split(',');
 
     Pos start = new Pos()
     {
-        x = 0,
-        y = 0
+        x = int.Parse(startstr[0]),
+        y = int.Parse(startstr[1])
+    };
+
+    Pos end = new Pos()
+    {
+        x = int.Parse(endstr[0]),
+        y = int.Parse(endstr[1])
+    };
+
+    for(int y = start.y; y <= end.y; y++)
+    {
+        for(int x = start.x; x <= end.x; x++)
+        {
+            if (command == Switch.On) lights[x, y] = true;
+            else if (command == Switch.Off) lights[x, y] = false;
+            else lights[x, y] = !lights[x, y];
+        }
     }
 
     Console.WriteLine(cmd + " | " + command);
 }
+Console.WriteLine(lights.Cast<bool>().Count(a => a));
 enum Switch 
 {
     None,
