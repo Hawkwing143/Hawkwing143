@@ -1,0 +1,14 @@
+/Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/Hawkwing143.GeneratedMSBuildEditorConfig.editorconfig
+/Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/Hawkwing143.AssemblyInfoInputs.cache
+/Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/Hawkwing143.AssemblyInfo.cs
+/Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/Hawkwing143.csproj.CoreCompileInputs.cache
+/Users/leesacademy/Desktop/aoc/Hawkwing143/bin/Debug/net7.0/Hawkwing143
+/Users/leesacademy/Desktop/aoc/Hawkwing143/bin/Debug/net7.0/Hawkwing143.deps.json
+/Users/leesacademy/Desktop/aoc/Hawkwing143/bin/Debug/net7.0/Hawkwing143.runtimeconfig.json
+/Users/leesacademy/Desktop/aoc/Hawkwing143/bin/Debug/net7.0/Hawkwing143.dll
+/Users/leesacademy/Desktop/aoc/Hawkwing143/bin/Debug/net7.0/Hawkwing143.pdb
+/Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/Hawkwing143.dll
+/Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/refint/Hawkwing143.dll
+/Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/Hawkwing143.pdb
+/Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/Hawkwing143.genruntimeconfig.cache
+/Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/ref/Hawkwing143.dll
