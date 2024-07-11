@@ -999,37 +999,51 @@ pxdfvcpvwaddrzwv
 phdqqxleqdjfgfbg
 cqfikbgxvjmnfncy";
 
+input = @"aaa
+aaaa
+aacaa
+aaaca
+aaacaa";
+
 int good = 0;
 foreach(string name in input.Split('\n')) 
 {
-    int aeiou = 0;
-    bool twice = false;
-    bool nauty = false;
-
-    for (int i = 0; i < name.Length; i++)
+    // int aeiou = 0;
+    // bool twice = false;
+    // bool nauty = false;
+    string pair;
+    bool skip = false;
+    for (int i = 2; i < name.Length; i++) //int i to 0 for fist part
     {
-        char letter = name[i];
-        if ("aeiou".Contains(letter))
+        string tri = name.Substring(i - 2, 3);
+        if (tri[0] == tri[2]) skip = true;
+        if (tri[0] == tri[1]) pair = name.Substring(0, 2)
+        else if (tri[1] == tri[2]) pair = name.Substring(1, 2);
         {
-            aeiou++;
+            
         }
-        if (i > 0)
-        {
-            char prvletter = name[i - 1];
-            if (prvletter == letter)
-            {
-                twice = true;
-            }
-            if (new List<string>{"ab" ,"cd" ,"pq" ,"xy"}.Contains($"{prvletter}{letter}"))
-            {
-                nauty = true;
-            }
-        }
-
+        // char letter = name[i];
+        // if ("aeiou".Contains(letter))
+        // {
+        //     aeiou++;
+        // }
+        // if (i > 0)
+        // {
+        //     char prvletter = name[i - 1];
+        //     // if (prvletter == letter)
+        //     // {
+        //     //     twice = true;
+        //     // }
+        //     // if (new List<string>{"ab" ,"cd" ,"pq" ,"xy"}.Contains($"{prvletter}{letter}"))
+        //     // {
+        //     //     nauty = true;
+        //     // }
+        // }
+        Console.WriteLine(tri)
     }
-    if (aeiou >= 3 && twice && !nauty)
-    {
-        good++;
-    }
+    // if (aeiou >= 3 && twice && !nauty)
+    // {
+    //     good++;
+    // }
 }
 Console.WriteLine(good);
