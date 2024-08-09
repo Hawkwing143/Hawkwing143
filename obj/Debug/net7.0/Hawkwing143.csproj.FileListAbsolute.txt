@@ -12,3 +12,4 @@
 /Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/Hawkwing143.pdb
 /Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/Hawkwing143.genruntimeconfig.cache
 /Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/ref/Hawkwing143.dll
+/Users/leesacademy/Desktop/aoc/Hawkwing143/obj/Debug/net7.0/Hawkwing143.sourcelink.json

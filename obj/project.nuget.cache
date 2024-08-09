@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "xrJ5Vi1DV0BFLc5JpMy+OD/408w1qURtBQQAjTxjpVToz02sSD0CJT8mhgqwPoZGmz5rKXUhfJN8IEjriq/AOw==",
+  "dgSpecHash": "Zgacc3Ddjxs=",
   "success": true,
   "projectFilePath": "/Users/leesacademy/Desktop/aoc/Hawkwing143/Hawkwing143.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/leesacademy/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/leesacademy/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/leesacademy/.nuget/packages/microsoft.netcore.app.host.osx-x64/7.0.20/microsoft.netcore.app.host.osx-x64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
